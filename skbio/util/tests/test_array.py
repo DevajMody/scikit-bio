@@ -14,7 +14,7 @@ import numpy.testing as npt
 import array_api_compat as aac
 
 from skbio.util import get_package
-from skbio.util._array import ingest_array
+from skbio.util._array import ingest_array, _get_array
 
 
 # import optional dependencies
@@ -188,6 +188,27 @@ class TestIngestArray(TestCase):
         self.assertIs(xp, aac.numpy)
         self.assertIsInstance(obs, np.ndarray)
         npt.assert_array_equal(xarr.to_numpy(), np.arange(5))
+
+
+class TestGetArray(TestCase):
+
+    def test_get_array_numpy_array(self):
+        # NumPy arrays are returned as-is
+        arr = np.arange(5)
+        obs = _get_array(arr)
+        self.assertIs(obs, arr)
+        npt.assert_array_equal(obs, np.arange(5))
+
+        # Test with to_numpy=True
+        obs = _get_array(arr, to_numpy=True)
+        self.assertIs(obs, arr)
+
+    def test_get_array_list_conversion(self):
+        # Lists are converted to NumPy arrays
+        lst = [1, 2, 3, 4, 5]
+        obs = _get_array(lst)
+        self.assertIsInstance(obs, np.ndarray)
+        npt.assert_array_equal(obs, np.array([1, 2, 3, 4, 5]))
 
 
 if __name__ == "__main__":

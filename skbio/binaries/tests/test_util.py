@@ -10,7 +10,7 @@ from unittest import TestCase, main
 
 import numpy as np
 
-from skbio.binaries._util import py_to_bin_random_seed
+from skbio.binaries._util import py_to_bin_random_seed, available, get_api_version
 
 
 class UtilTests(TestCase):
@@ -60,6 +60,17 @@ class UtilTests(TestCase):
         rng = np.random.default_rng(42)
         obs = py_to_bin_random_seed(rng)
         self.assertEqual(obs, 191664964)
+
+    def test_available_function(self):
+        # Test that available() returns a boolean
+        obs = available()
+        self.assertIsInstance(obs, bool)
+
+    def test_get_api_version_function(self):
+        # Test that get_api_version() returns an integer
+        obs = get_api_version()
+        self.assertIsInstance(obs, int)
+        self.assertTrue(obs >= 0)
 
 
 if __name__ == "__main__":

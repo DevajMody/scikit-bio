@@ -58,11 +58,11 @@ The test suite consists of comprehensive testing across all major modules of sci
 
 ### Test Results Summary
 
-- **Total Test Cases**: 3,296 tests executed
-- **Passed**: 3,188 tests (96.7% success rate)
-- **Skipped**: 108 tests (3.3% - typically due to optional dependencies or platform-specific features)
+- **Total Test Cases**: 3,302 tests executed
+- **Passed**: 3,192 tests (96.7% success rate)
+- **Skipped**: 110 tests (3.3% - typically due to optional dependencies or platform-specific features)
 - **Failed**: 0 tests (100% of executed tests passed)
-- **Test Duration**: 43.75 seconds
+- **Test Duration**: 59.12 seconds
 - **Warnings**: 67 warnings (mostly deprecation and future warnings, not failures)
 
 ### Coverage Metrics
@@ -71,8 +71,8 @@ The test suite consists of comprehensive testing across all major modules of sci
 - **Total Coverage**: 98% across all measured modules
 - **Coverage Type**: Statement and branch coverage
 - **Total Statements**: 13,906 lines
-- **Covered Statements**: 13,649 lines
-- **Missed Statements**: 257 lines
+- **Covered Statements**: 13,650 lines
+- **Missed Statements**: 256 lines
 - **Branch Coverage**: 5,142 branches with 149 partial coverage
 
 **High Coverage Modules** (100% coverage):
@@ -106,11 +106,23 @@ The test suite consists of comprehensive testing across all major modules of sci
 
 **Strengths:**
 - **Comprehensive Coverage**: Most modules have >95% statement coverage
-- **Robust Test Suite**: 3,296 tests provide extensive validation
+- **Robust Test Suite**: 3,302 tests provide extensive validation
 - **Multi-level Testing**: Combination of unit tests and doctest integration
-- **Performance**: Tests complete in under 45 seconds despite large test suite
+- **Performance**: Tests complete in under 60 seconds despite large test suite
 - **Module Organization**: Well-structured test organization mirrors source code structure
 
 **Areas for Improvement:**
 - Very low coverage (16%) in `_plotting.py` indicating limited testing of visualization features
 - Only 45% coverage in `_ordination_results.py` suggests incomplete testing of result visualization/formatting
+
+### Recent Test Enhancements
+
+**Additional Test Cases Added:**
+- **test_plotting.py**: Added tests for PDF format output and error handling for missing plot methods
+- **test_array.py**: Added direct tests for `_get_array()` function with NumPy arrays and list conversion
+- **test_util.py (binaries)**: Added tests for `available()` and `get_api_version()` functions
+
+**Impact:**
+- **Test Count Increase**: 6 additional tests (3,296 → 3,302)
+- **Coverage Improvement**: Minor improvement in `skbio/binaries/_util.py` from 80% to 82%
+- **Code Quality**: Enhanced test coverage for edge cases and error conditions

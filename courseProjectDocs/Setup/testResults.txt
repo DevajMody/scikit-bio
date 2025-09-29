@@ -12,7 +12,7 @@ Name                                                                            
 /Users/devajmody/Repos/msse/qa/scikit-bio/skbio/alignment/_utils.py                                        157      0     82      0   100%
 /Users/devajmody/Repos/msse/qa/scikit-bio/skbio/binaries/_distance.py                                        6      0      0      0   100%
 /Users/devajmody/Repos/msse/qa/scikit-bio/skbio/binaries/_ordination.py                                      6      0      0      0   100%
-/Users/devajmody/Repos/msse/qa/scikit-bio/skbio/binaries/_util.py                                           45      7     20      2    80%
+/Users/devajmody/Repos/msse/qa/scikit-bio/skbio/binaries/_util.py                                           45      6     20      2    82%
 /Users/devajmody/Repos/msse/qa/scikit-bio/skbio/diversity/_block.py                                         76      1     28      4    95%
 /Users/devajmody/Repos/msse/qa/scikit-bio/skbio/diversity/_driver.py                                       111      1     56      4    97%
 /Users/devajmody/Repos/msse/qa/scikit-bio/skbio/diversity/_util.py                                          43      0     14      0   100%
@@ -120,4 +120,4 @@ Name                                                                            
 /Users/devajmody/Repos/msse/qa/scikit-bio/skbio/util/_warning.py                                            40      1     16      1    96%
 /Users/devajmody/Repos/msse/qa/scikit-bio/skbio/workflow.py                                                141      3     60      4    97%
 ------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                                                    13906    257   5142    149    98%
+TOTAL                                                                                                    13906    256   5142    149    98%

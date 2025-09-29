@@ -75,6 +75,26 @@ class TestPlottableMixin(unittest.TestCase):
         self.assertIsNone(obj._figure_data())
         sys.modules['matplotlib'] = backup
 
+    def test_figure_data_pdf_format(self):
+        obj = PlottableMixin()
+        obj._get_mpl_plt()
+
+        # PDF data are bytes
+        obs = obj._figure_data('pdf')
+        self.assertIsInstance(obs, bytes)
+        self.assertTrue(len(obs) > 0)
+
+    def test_figure_data_missing_plot_method(self):
+        obj = PlottableMixin()
+        obj._get_mpl_plt()
+
+        # Remove plot method to test error handling
+        if hasattr(PlottableMixin, 'plot'):
+            delattr(PlottableMixin, 'plot')
+
+        with self.assertRaises(AttributeError):
+            obj._figure_data()
+
 
 if __name__ == '__main__':
     unittest.main()
