@@ -1,0 +1,29 @@
+Test Results for Mock-Based HTTPSource Tests
+
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0
+collected 5 items
+
+skbio/io/tests/test_httpsource_mock.py::TestHTTPSourceMock::test_can_read_http_url PASSED
+skbio/io/tests/test_httpsource_mock.py::TestHTTPSourceMock::test_can_read_https_url PASSED
+skbio/io/tests/test_httpsource_mock.py::TestHTTPSourceMock::test_can_read_non_http_url PASSED
+skbio/io/tests/test_httpsource_mock.py::TestHTTPSourceMock::test_get_reader_http_error PASSED
+skbio/io/tests/test_httpsource_mock.py::TestHTTPSourceMock::test_get_reader_successful PASSED
+
+============================== 5 passed in 1.34s ================================
+
+
+Coverage Report for skbio/io/_iosources.py with Mock Tests:
+
+Name                     Stmts   Miss Branch BrPart  Cover
+----------------------------------------------------------
+skbio/io/_iosources.py     139      3     10      0    98%
+
+Previous coverage (from Setup/testResults.txt): 98%
+Current coverage with mock tests: 98%
+
+Note: HTTPSource module maintains 98% coverage. The mock-based tests provide:
+- Isolated unit tests that don't require network connectivity
+- Faster test execution
+- Better error case testing (HTTP errors, network failures)
+- Improved test reliability (no dependency on external servers)
