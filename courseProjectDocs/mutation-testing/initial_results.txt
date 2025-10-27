@@ -1,0 +1,7 @@
+    simple_calc.x_divide__mutmut_3: survived
+    simple_calc.x_divide__mutmut_4: survived
+    simple_calc.x_divide__mutmut_5: survived
+    simple_calc.x_divide__mutmut_6: survived
+    simple_calc.x_is_positive__mutmut_1: survived
+    simple_calc.x_is_positive__mutmut_2: survived
+    simple_calc.x_max_of_two__mutmut_1: survived
