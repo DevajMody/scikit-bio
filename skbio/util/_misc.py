@@ -94,7 +94,7 @@ def chunk_str(s, n, char):
         raise ValueError(
             "Cannot split string into chunks with n=%d. n must be >= 1." % n
         )
-    return char.join((s[i : i + n] for i in range(0, len(s), n)))
+    return char.join((s[i:i + n] for i in range(0, len(s), n)))
 
 
 def cardinal_to_ordinal(n):
@@ -136,7 +136,7 @@ def cardinal_to_ordinal(n):
     # Originally from http://codegolf.stackexchange.com/a/4712 by Gareth
     if n < 0:
         raise ValueError("Cannot convert negative integer %d to ordinal string." % n)
-    return "%d%s" % (n, "tsnrhtdd"[(n // 10 % 10 != 1) * (n % 10 < 4) * n % 10 :: 4])
+    return "%d%s" % (n, "tsnrhtdd"[(n // 10 % 10 != 1) * (n % 10 < 4) * n % 10::4])
 
 
 def safe_md5(open_file, block_size=2**20):
@@ -173,7 +173,7 @@ def safe_md5(open_file, block_size=2**20):
     """
     import hashlib
 
-    md5 = hashlib.md5()
+    md5 = hashlib.md5(usedforsecurity=False)
     data = True
     while data:
         data = open_file.read(block_size)

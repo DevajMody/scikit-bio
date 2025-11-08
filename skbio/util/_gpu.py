@@ -25,6 +25,7 @@ def cuda_avail():  # pragma: no cover
             ["nvidia-smi"],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
+            check=False,
         )
         return result.returncode == 0
     except FileNotFoundError:
