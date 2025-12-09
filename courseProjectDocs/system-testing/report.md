@@ -2,7 +2,7 @@
 
 ## Test Scope and Coverage
 
-These black-box system tests validate end-to-end workflows of scikit-bio through its public API. The tests treat the library as a whole without referencing internal code structure.
+Black-box tests that validate scikit-bio's main workflows through its public API, treating the library as a whole without looking at internal code.
 
 **Workflows Covered:**
 - DNA sequence analysis pipeline (read, process, analyze)
@@ -41,7 +41,6 @@ These black-box system tests validate end-to-end workflows of scikit-bio through
 ## Group Contributions
 
 **Devaj:**
-- Designed 4 black-box system test cases
-- Documented test scope, steps, and expected results
-- Executed tests and recorded outcomes
-- Created README and report documentation
+- Wrote 4 black-box test cases
+- Ran tests and documented results
+- Created README and report

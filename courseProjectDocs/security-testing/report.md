@@ -49,8 +49,6 @@ bandit -r skbio/util/ -f json -o bandit_results.json
 ## Group Contributions
 
 **Devaj:**
-- Selected and configured Bandit security scanner
-- Executed security scan on skbio/util module
-- Analyzed and documented 6 vulnerabilities
-- Provided severity assessment and remediation recommendations
-- Created README and report documentation
+- Ran Bandit security scanner on skbio/util module
+- Documented 6 vulnerabilities with severity and fixes
+- Created README and report
