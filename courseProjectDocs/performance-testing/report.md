@@ -54,6 +54,10 @@ ncalls  tottime  cumtime  function
 5000    0.029    0.029    numpy.array
 ```
 
+#### Screenshot: Profiling Output
+
+![Performance Profiling Results](profiling_screenshot.png)
+
 ### 4. Performance Findings
 
 **Finding: Memory accumulation in batch sequence processing**

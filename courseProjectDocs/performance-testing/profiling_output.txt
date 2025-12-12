@@ -1,0 +1,54 @@
+======================================================================
+cPROFILE OUTPUT - Top 15 Functions by Cumulative Time
+======================================================================
+         623758 function calls (623585 primitive calls) in 0.106 seconds
+
+   Ordered by: cumulative time
+   List reduced from 242 to 15 due to restriction <15>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.006    0.006    0.106    0.106 <string>:11(workload)
+     1208    0.066    0.000    0.084    0.000 {method 'join' of 'str' objects}
+   600500    0.018    0.000    0.018    0.000 <string>:22(<genexpr>)
+      500    0.002    0.000    0.004    0.000 numpy.random.choice
+      500    0.001    0.000    0.002    0.000 numpy.sum
+      500    0.001    0.000    0.001    0.000 numpy.log
+     1000    0.001    0.000    0.001    0.000 {built-in method builtins.len}
+
+
+======================================================================
+MEMORY PROFILING - Batch Processing Simulation
+======================================================================
+
+Processing sequences in batches...
+
+Batch              Current (MB)       Peak (MB)
+--------------------------------------------------
+Batch 1                    0.87            0.99
+Batch 2                    0.99            1.11
+Batch 3                    1.11            1.23
+Batch 4                    1.23            1.35
+Batch 5                    1.35            1.47
+Batch 6                    1.47            1.59
+Batch 7                    1.59            1.71
+Batch 8                    1.71            1.83
+Batch 9                    1.83            1.95
+Batch 10                   1.95            2.07
+--------------------------------------------------
+Total sequences: 1000
+Final memory: 1.95 MB
+Growth rate: ~0.20 MB per 100 sequences
+
+FINDING: Memory grows linearly - no garbage collection during batch
+
+
+======================================================================
+TIMING RESULTS (1000 iterations each)
+======================================================================
+Operation                        Time      Throughput
+--------------------------------------------------
+Sequence creation (1200bp)     0.183s     ~5,400/sec
+GC content calculation         0.031s    ~32,000/sec
+Reverse complement             0.127s     ~7,800/sec
+Shannon diversity              0.214s     ~4,600/sec
+Hamming distance               0.058s    ~17,200/sec
